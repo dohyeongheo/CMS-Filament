@@ -93,7 +93,7 @@ class ContentResource extends Resource
                             ])
                             ->required(),
                         FileUpload::make('path')->label('컨텐츠 업로드')
-                            ->directory('content/'),
+                            ->directory('content'),
                         Toggle::make('isPublished')->label('컨텐츠 발행')
                             ->onColor('success')
                             ->offColor('danger')
