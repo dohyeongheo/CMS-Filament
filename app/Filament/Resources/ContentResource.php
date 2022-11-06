@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\ContentResource\Pages;
 use App\Filament\Resources\ContentResource\RelationManagers;
 use App\Models\Content;
@@ -148,6 +149,7 @@ class ContentResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                FilamentExportBulkAction::make('export')
             ])
             ->reorderable('id');
     }

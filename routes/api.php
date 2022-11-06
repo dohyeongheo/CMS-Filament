@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CsvController;
 use App\Http\Controllers\API\ImageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('unity/imageUpload', [ImageController::class, 'imageStore']);
-
+Route::get('unity/ExportCsv', [CsvController::class, 'exportCsv']);
