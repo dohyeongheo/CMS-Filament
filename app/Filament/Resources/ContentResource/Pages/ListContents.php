@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ContentResource\Pages;
 
 use App\Filament\Resources\ContentResource;
+use App\Filament\Resources\ContentResource\Widgets\ContentOverview;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -16,4 +17,6 @@ class ListContents extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
+
+
 }
