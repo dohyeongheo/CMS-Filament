@@ -1,3 +1,5 @@
+# Tech Stacks
+
 - Backend
     - PHP 8.16
     - Laravel v9.37.0
@@ -13,6 +15,10 @@
 - Database
     - MariaDB : 10.4.24
     - PhpMyAdmin • Version: 5.2.0
+
+
+# Notion Page
+https://www.notion.so/dohyeongheo/CMS-278a3380611f4d0eae0a981e7fbc1853
 
 # Screenshot
 
