@@ -81,12 +81,9 @@ class ContentResource extends Resource
                             ->relationship('category', 'title')->required()->label('카테고리 선택'),
                         TextInput::make('title')->required()->label('컨텐츠 타이틀'),
                         RichEditor::make('detail')->required()->label('컨텐츠 디테일')
-                            // ->disableToolbarButtons([
-                            //     'attachFiles',
-                            //     'codeBlock',
-                            // ])
-                            // ->fileAttachmentsVisibility('private')
-                            ->fileAttachmentsDirectory('attachments'),
+                            ->fileAttachmentsDisk('s3')
+                            ->fileAttachmentsDirectory('editor-attachments')
+                            ->fileAttachmentsVisibility('private'),
                         Select::make('contentType')->label('미디어 타입')
                             ->options([
                                 '1' => '사진',
@@ -95,8 +92,9 @@ class ContentResource extends Resource
                             ->required(),
                         FileUpload::make('attachment')->label('컨텐츠 업로드')
                             ->disk('s3')
-                    ->directory('content-upload')
-                            ->visibility('private'),
+                            ->directory('content-upload')
+                            ->visibility('private')
+                            ->maxSize(1024),
                         Toggle::make('isPublished')->label('컨텐츠 발행')
                             ->onColor('success')
                             ->offColor('danger')
