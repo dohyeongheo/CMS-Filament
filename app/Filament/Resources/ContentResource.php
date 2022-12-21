@@ -95,7 +95,7 @@ class ContentResource extends Resource
                             ->required(),
                         FileUpload::make('attachment')->label('컨텐츠 업로드')
                             ->disk('s3')
-                            ->visibility('private')
+                            ->visibility('private'),
                         Toggle::make('isPublished')->label('컨텐츠 발행')
                             ->onColor('success')
                             ->offColor('danger')
