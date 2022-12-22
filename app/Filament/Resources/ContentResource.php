@@ -111,11 +111,12 @@ class ContentResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([ImageColumn::make('path')
-                ->disk('s3')
-                ->circular()
-                ->size(100)
-                ->label('미디어'),
+            ->columns([
+                ImageColumn::make('path')
+                    ->disk('s3')
+                    ->circular()
+                    ->size(100)
+                    ->label('미디어'),
 
                 TextColumn::make('id')
                     ->label('ID')
@@ -124,6 +125,8 @@ class ContentResource extends Resource
                     ->label('컨텐츠 타이틀'),
                 TextColumn::make('detail')
                     ->label('컨텐츠 디테일')
+                ->limit(50)
+                ->size('sm')
                 ->wrap()
                     ->html(),
 
