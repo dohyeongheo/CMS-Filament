@@ -124,6 +124,7 @@ class ContentResource extends Resource
                     ->label('컨텐츠 타이틀'),
                 TextColumn::make('detail')
                     ->label('컨텐츠 디테일')
+                ->wrap()
                     ->html(),
 
                 TextColumn::make('contentType')
