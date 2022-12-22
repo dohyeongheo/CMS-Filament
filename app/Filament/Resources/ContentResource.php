@@ -136,7 +136,9 @@ class ContentResource extends Resource
                 IconColumn::make('isPublished')
                     ->boolean()
                     ->label('발행여부'),
-                TextColumn::make('created_at')->dateTime()
+            TextColumn::make('created_at')
+                ->label('업로드 일자')
+                ->dateTime()
             ])
             ->filters(
                 [
