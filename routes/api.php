@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\API\CsvController;
-use App\Http\Controllers\API\ImageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\CsvController;
+use App\Http\Controllers\API\ImageController;
 
 /*
 |--------------------------------------------------------------------------

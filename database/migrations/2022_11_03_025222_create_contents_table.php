@@ -20,7 +20,7 @@ return new class extends Migration
                 $table->string('title');
                 $table->text('detail');
                 $table->integer('contentType');
-                $table->string('path');
+                $table->string('path')->nullable();
                 $table->boolean('isPublished')->default(true);
                 $table->timestamps();
             });
